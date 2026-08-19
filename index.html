@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello</title>
+<style>
+  :root {
+    --bg: #f4f1f8;
+    --fg: #6a1b9a;
+    --accent: #ff2fd0;
+
+    --glow-tight-1: clamp(1px, 0.3vw, 3px);
+    --glow-tight-2: clamp(2px, 0.6vw, 6px);
+    --glow-tight-3: clamp(3px, 1vw, 9px);
+    --glow-halo:    clamp(5px, 1.8vw, 16px);
+    --glow-wide-1:  clamp(8px, 3vw, 22px);
+    --glow-wide-2:  clamp(14px, 5vw, 38px);
+    --glow-wide-3:  clamp(20px, 7vw, 55px);
+    --glow-wide-4:  clamp(28px, 10vw, 78px);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 15vw, 9rem);
+    letter-spacing: 0.03em;
+    color: var(--fg);
+    text-shadow:
+      0 0 var(--glow-tight-1) rgba(106, 27, 154, 0.55),
+      0 0 var(--glow-tight-2) rgba(106, 27, 154, 0.35),
+      0 0 var(--glow-halo) rgba(255, 47, 208, 0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0014;
+      --fg: #ffffff;
+    }
+
+    h1 {
+      text-shadow:
+        0 0 var(--glow-tight-1) #ffffff,
+        0 0 var(--glow-tight-2) #ffffff,
+        0 0 var(--glow-tight-3) #e0f7ff,
+        0 0 var(--glow-wide-1) #00eaff,
+        0 0 var(--glow-wide-2) #00eaff,
+        0 0 var(--glow-wide-3) #ff2fd0,
+        0 0 var(--glow-wide-4) #ff2fd0;
+    }
+  }
+</style>
+</head>
+<body><h1>Hello</h1></body>
+</html>
